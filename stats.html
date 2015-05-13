@@ -2,6 +2,8 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="main.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="lolapi.js"></script>
 <title>lol shizzle</title>
 </head>
 <body>
@@ -12,11 +14,34 @@
       <li class="currentPage">stats</li>
       <li><a href="nextOption.html">compare</a></li>
       <li><a href="otherOption.html">rock-paper-scissors</a></li>	  
-	  <li><a href="r-p-s-l-s.html">rock-paper-scissors-lizard-spock</a></li>
+	    <li><a href="r-p-s-l-s.html">rock-paper-scissors-lizard-spock</a></li>
     </ul>
   </div>
   <div class="content">
-		
+    <br />Summoner Name:
+    <br />
+    <input id="userName" />
+    <input type="submit" onclick="summonerLookUp();" />
+    <br />
+    <br />Summoner Level: <span id="sLevel"></span>
+
+    <br />Summoner ID: <span id="sID"></span>
+    <br />
+    <br />
+    <hr />
+    <br />
+    summoner Id:
+    <br />
+    <input id="summonerId" />
+    <button type="submit" onclick="Name();">Summoner Id</button>
+    <br />
+    <br />Summoner Level: <span id="sLevel"></span>
+
+    <br />Summoner Name: <span id="sID"></span>
+    <br />
+    <br />
+    <hr />
+
   </div>
   
 </body>
