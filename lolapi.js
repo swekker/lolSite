@@ -64,12 +64,18 @@ function Name() {
                 for(i=0;i<json.champions.length;i++){
                     if(json.champions[i].id!==0){
                        someStat1 += json.champions[i].stats.totalDeathsPerSession;
+                   }else{
+                        Pentas = json.champions[i].stats.totalPentaKills;
+                        Quadras = json.champions[i].stats.totalQuadraKills;
+                        Triples = json.champions[i].stats.totalTripleKills;
                    }
                 }
                 //also could have used id:0, but didn't know that gives total of all 'sessions'
                 
                 document.getElementById("someStat").innerHTML = someStat1;                
-                
+                document.getElementById("sPenta").innerHTML = Pentas;     
+                document.getElementById("sQuadra").innerHTML = Quadras;     
+                document.getElementById("sTriple").innerHTML = Triples;     
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
                 alert("error getting Summoner data!");
