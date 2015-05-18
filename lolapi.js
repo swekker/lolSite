@@ -60,10 +60,15 @@ function Name() {
 
             },
             success: function (json) {
-                someStat1 = json.champions[0].id;
-                someStat1 = json.champions[0].stats.totalDeathsPerSession;
-                document.getElementById("someStat").innerHTML = someStat1;
+                someStat1=0;
+                for(i=0;i<json.champions.length;i++){
+                    if(json.champions[i].id!==0){
+                       someStat1 += json.champions[i].stats.totalDeathsPerSession;
+                   }
+                }
+                //also could have used id:0, but didn't know that gives total of all 'sessions'
                 
+                document.getElementById("someStat").innerHTML = someStat1;                
                 
             },
             error: function (XMLHttpRequest, textStatus, errorThrown) {
